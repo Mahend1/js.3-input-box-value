@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>3 input box value</h2>
+    <h3>A:<input type="number" placeholder="Text box 1..." id="box1">
+        B:<input type="number" placeholder="Text box 2..." id="box2">
+        C:<input type="number" placeholder="Text box 3..." id="box3"></h3>
+    <button onclick="getuserinput()">Try it</button>
+
+    <p id="demo"></p>
+</body>
+
+<script>
+    function getuserinput() {
+        let box1 = document.getElementById("box1").value;
+        box1 =parseInt(box1)
+        let box2 = document.getElementById("box2").value;
+        box2=parseInt(box2)
+        let box3 = document.getElementById("box3").value;
+        box3=parseInt(box3)
+
+        switch (true) {
+            case (box1 > box2 && box1 > box3):
+                document.getElementById("demo").innerHTML = "A grater than B & C" 
+                break;
+            case (box2 > box3 && box2 > box1):
+                document.getElementById("demo").innerHTML = "B grater than A & c"
+                break;
+            case (box3 > box1 && box3 >box2):
+                document.getElementById("demo").innerHTML = "C grater than A & B"
+                break;
+            case (box1 >= box2 && box3 >= box1):
+                document.getElementById("demo").innerHTML = "A, B, C same" 
+                break;
+            case (box1 == box2):
+                document.getElementById("demo").innerHTML = "A, B same" 
+                break;
+            case (box2 == box3):
+                document.getElementById("demo").innerHTML = "B, C same" 
+                break;
+            case (box3 >= box1):
+                document.getElementById("demo").innerHTML = "A, C same" 
+                break;
+            
+        }
+        document.getElementById("demo").innerHTML = box1.box2.box3;
+    }
+</script>
+
+</html>
